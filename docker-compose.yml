@@ -1,0 +1,15 @@
+version: "2"
+services:
+  ui:
+    image: swaggerapi/swagger-ui
+    volumes:
+      - ./project/api/swagger/swagger.yaml:/usr/share/nginx/html/sample.yaml
+    environment:
+      API_URL: sample.yaml
+    ports:
+      - "10011:8080"
+  mock:
+    build: .
+    ports:
+      - "10010:10010"
+    command: "npm run start"
