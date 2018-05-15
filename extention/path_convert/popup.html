@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>パス変換ツール</title>
+    <link href="app.css" rel="stylesheet">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <h1>パス変換ツール</h1>
+    <div role="main">
+      <div>
+        <label>どうしたい？</label>
+        <select id="selecter">
+          <option value="1">windowsからmac</option>
+          <option value="2">macからwindows</option>
+        </select>
+      </div>
+      <div>
+        <label>ファイルパスを入力</label>
+        <input type="text" name="base_path" id="base_path" class="path_fileds" placeholder="\\parent\child">
+      </div>
+      <div>
+        <label>result</label>
+        <input type="text" name="changed_path" id="changed_path" class="path_fileds">
+      </div>
+      <button id="change">change and copy!</button>
+    </div>
+  </body>
+</html>
